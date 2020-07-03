@@ -1,0 +1,17 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,CAAC,AAAC,CACE,MAAM,CAAE,CAAC,CACT,OAAO,CAAE,CAAC,CAAG,AAEjB,AAAA,GAAG,AAAC,CACA,gBAAgB,CAAE,OAAO,CAAG,AAEhC,AAAA,MAAM,AAAC,CAEH,UAAU,CAAE,KAAK,CACjB,gBAAgB,CAAE,OAAO,CAAG,AAEhC,AAAA,OAAO,AAAC,CACJ,UAAU,CAAE,IAAI,CAAG,AAGvB,AAAA,MAAM,AAAC,CACH,gBAAgB,CAAE,OAAO,CACzB,UAAU,CAAE,KAAK,CAAG",
+    "sources": [
+        "../sass/style.sass",
+        "../sass/_common.sass",
+        "../sass/_mixins.sass",
+        "../sass/_1_nav.sass",
+        "../sass/_2_header.sass",
+        "../sass/_3_about.sass",
+        "../sass/_4_products.sass",
+        "../sass/_5_blog.sass",
+        "../sass/_6_footer.sass"
+    ],
+    "names": [],
+    "file": "style.css"
+}
