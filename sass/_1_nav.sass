@@ -1,1 +1,60 @@
+// Mobile first
+    
+nav 
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    .time 
+        padding: 10px    
+        text-align: center
+        background-color: cadetblue
 
+    .burger 
+        padding: 10px
+        background-color: royalblue
+        text-align: center
+    ul 
+        display: flex
+        flex-direction: column
+        height: calc(50px * 4)
+        overflow: hidden
+        list-style: none
+        transition: 1s linear
+        li 
+            a
+                display: block
+                height: 50px
+                line-height: 50px
+                text-align: center
+                text-decoration: none        
+                color: white
+    .section-info 
+        padding: 10px
+        text-align: center
+        color: white
+        background-color: #666
+
+
+// Logic menu hamburger
+
+i.off 
+    display: none
+
+i.fa-angle-up
+    color: white
+    
+ul.off
+    height: 0
+
+// Desktop
+
+@media(min-width: 1025px)
+    nav
+        ul
+            flex-direction: row
+            height: 50px
+            justify-content: center
+            transition: .2s linear
+            li 
+                flex-basis: 15%

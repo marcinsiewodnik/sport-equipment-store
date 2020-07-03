@@ -13,21 +13,29 @@
 
 <body>
 
-    <div class="burger">
-        <i class="fas fa-bars"></i>
-        <i class="fas fa-angle-up off"></i>
-    </div>
+    <nav>
 
-    <nav class="off">
+        <div class="time">Current time: <span></span></div>
 
-        <ul>
-            <li><a href="">About</a></li>
-            <li><a href="">Products</a></li>
-            <li><a href="">Blog</a></li>
-            <li><a href="">Contact</a></li>
+        <div class="burger">
+
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-angle-up off"></i>
+        </div>
+
+
+        <ul class="off">
+            <li><a href="#" data-goto="about">About</a></li>
+            <li><a href="#" data-goto="products">Products</a></li>
+            <li><a href="#" data-goto="blog">Blog</a></li>
+            <li><a href="#" data-goto="contact">Contact</a></li>
         </ul>
 
-        <div class="time">Time</div>
+        <div class="section-info">
+
+            Welcome in our store!
+
+        </div>
 
     </nav>
 
@@ -35,16 +43,21 @@
 
     <main>
 
-        <section class="about">About</section>
-        <section class="products">Product</section>
-        <section class="blog">Blog</section>
-        <section class="contact">Contact</section>
+        <section class="about" data-section="about">About</section>
+        <section class="products" data-section="products">Product</section>
+        <section class="blog" data-section="blog">Blog</section>
+        <section class="contact" data-section="contact">Contact</section>
 
     </main>
 
     <footer>Footer</footer>
 
-    <script src="js/main.js"></script>
+    <script src="jquery/jquery-3.4.1.min.js"></script>
+
+    <script src="js/1_nav-hamburger.js"></script>
+    <script src="js/1_nav-time.js"></script>
+    <script src="js/1_nav-scroll-go-to-section.js"></script>
+    <script src="js/1_nav-section-info.js"></script>
 
 </body>
 
