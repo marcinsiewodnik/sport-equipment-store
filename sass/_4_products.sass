@@ -1,0 +1,67 @@
+section.products
+
+    display: flex
+    flex-direction: column
+
+    min-height: calc(100vh - 117px)
+
+    background-color: #ddd
+
+    .filter-panel 
+
+        padding: 10px
+        
+        background-color: #14191F
+
+        p 
+            padding: 5px
+
+            input 
+
+                padding: 10px
+                border: 3px solid black
+
+                font-size: 20px
+
+                text-align: center
+                
+        p:nth-of-type(1)
+
+            color: white
+
+    .products-panel 
+
+        align-self: center
+        max-width: 1280px
+        flex-grow: 1
+
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: center
+        align-content: start
+
+        padding: 10px
+
+        .product-item
+
+            height: 200px
+            width: 200px
+            padding: 10px
+            margin: 10px
+
+            background-color: grey
+
+
+@media(min-width: 1025px)
+
+    section.products
+
+        .products-panel 
+
+            .product-item
+                width: 250px
+                height: 250px
+
+
+
