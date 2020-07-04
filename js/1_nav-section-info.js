@@ -6,8 +6,6 @@ function changeText() {
 
     const aboutHeightWithoutPadding = document.querySelector('[data-section="about"').clientHeight;
 
-    console.log(aboutHeight, aboutHeightWithoutPadding);
-
     const productsHeight = document.querySelector('[data-section="products"').offsetHeight;
     const blogHeight = document.querySelector('[data-section="blog"').offsetHeight;
     const contactHeight = document.querySelector('[data-section="contact"').offsetHeight;

@@ -1,0 +1,86 @@
+section.about
+    min-height: calc(100vh - 117px)
+
+    display: flex
+    flex-direction: column
+
+    background-color: #313136
+    color: #8A8B91
+
+    div.message 
+
+        p
+            text-align: center
+            span 
+                height: 70px
+                line-height: 70px
+            .cursor 
+                opacity: 0
+                transition: 0.15s
+            .cursor.active 
+                opacity: 1
+
+
+    div.summary 
+
+        flex-grow: 1
+
+        display: flex
+        
+        div.container
+
+            flex-basis: 100%
+
+
+            display: flex
+            flex-direction: column
+            justify-content: space-evenly
+
+            div
+                flex-basis: 30%
+                flex-grow: 1
+
+                display: flex
+                flex-direction: column
+                justify-content: center
+
+                span 
+
+                    flex-basis: 50%
+
+                    display: flex
+                    align-items: center
+                    justify-content: center
+  
+                span:nth-child(1)
+                    
+                    font-weight: bold
+                    background-color: #ED221C
+                    color: black
+
+                span:nth-child(2)
+
+
+@media(min-width: 533px)
+    section.about
+   
+        div.summary 
+
+            justify-content: center
+            align-items: center
+
+            div.container
+
+                flex-basis: 80%
+                height: 30vh
+
+                flex-direction: row
+
+                div
+                    
+                    span 
+
+                    span:nth-child(1)
+
+                    span:nth-child(2)
+

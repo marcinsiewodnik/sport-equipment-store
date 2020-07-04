@@ -3,17 +3,17 @@
 const slideList = [
 
     {
-        img: 'img/lake.jpg',
+        img: 'img/nature.jpg',
         text: 'Nature'
     },
 
     {
-        img: 'img/mountain.jpg',
+        img: 'img/sunset.jpg',
         text: 'Adventure'
     },
 
     {
-        img: 'img/woman.jpg',
+        img: 'img/yellow-mountains.jpg',
         text: 'Excitement'
     }
 
