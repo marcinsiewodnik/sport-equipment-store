@@ -7,12 +7,10 @@ function changeText() {
     const aboutHeightWithoutPadding = document.querySelector('[data-section="about"').clientHeight;
 
     const productsHeight = document.querySelector('[data-section="products"').offsetHeight;
-    const blogHeight = document.querySelector('[data-section="blog"').offsetHeight;
     const contactHeight = document.querySelector('[data-section="contact"').offsetHeight;
 
     const aboutFromTop = document.querySelector('[data-section="about"').offsetTop;
     const productsFromTop = document.querySelector('[data-section="products"').offsetTop;
-    const blogFromTop = document.querySelector('[data-section="blog"').offsetTop;
     const contactFromTop = document.querySelector('[data-section="contact"').offsetTop;
 
     const navHeight = document.querySelector("nav").clientHeight;
@@ -30,10 +28,6 @@ function changeText() {
     } else if (scrollSize < productsFromTop - navHeight + productsHeight - 1) {
 
         txt.textContent = "Products"
-
-    } else if (scrollSize < blogFromTop - navHeight + blogHeight - 1) {
-
-        txt.textContent = "Blog"
 
     } else {
 

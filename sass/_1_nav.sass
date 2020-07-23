@@ -15,14 +15,16 @@ nav
         padding: 10px
         background-color: #ED221C
         text-align: center
+
+        font-size: 30px
     ul 
-        display: flex
-        flex-direction: column
+        +flex-box(column)
         height: calc(50px * 4)
         overflow: hidden
         list-style: none
         transition: 1s linear
         li 
+            flex-grow: 1
             a
                 display: block
                 height: 50px
@@ -36,8 +38,6 @@ nav
         color: black
         background-color: #E5E5E5
         
-
-
 // Logic menu hamburger
 
 i.off 
@@ -53,8 +53,12 @@ ul.off
 
 @media(min-width: 1025px)
     nav
+        font-size: 20px
         ul
-            flex-direction: row
+
+            +flex-box(row)
+            +margin-center()
+            max-width: $max-width
             height: 50px
             justify-content: center
             transition: .2s linear

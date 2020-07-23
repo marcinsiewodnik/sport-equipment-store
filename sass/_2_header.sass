@@ -15,22 +15,23 @@ header
             top: 50%
             left: 50%
 
-            transform: translate(-50%, -50%)
+            +transform-center()
         h1
             position: absolute
             top: 70%
             left: 50%
             padding: 20px 30px
 
-            transform: translate(-50%, -50%)
+            +transform-center()
+
+            font-size: 30px
+            letter-spacing: 3px
 
             background-color: rgba(0, 0, 0, 0.5)
             color: white
 
     .dots-wrapper 
-        display: flex
-        justify-content: center
-        align-items: center
+        +flex-box-center()
         height: 50px
         background-color: #272727
         .dots             
@@ -51,4 +52,12 @@ header
             img 
                 width: auto
                 height: 100%
-            
+
+@media(min-width: 1025px)
+
+    header 
+        .slider 
+            h1
+                font-size: 50px
+                
+ 

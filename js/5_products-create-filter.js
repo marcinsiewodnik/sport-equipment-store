@@ -1,21 +1,61 @@
-const productsData = [
+// This data could be fetched from an external source
 
-    { name: "shoes", img: "img", price: 10 },
-    { name: "bag", img: "img", price: 11 },
-    { name: "trousers", img: "img", price: 12 },
-    { name: "shorts", img: "img", price: 13 },
+let productsData = [
 
-    { name: "t-shirt", img: "img", price: 14 },
-    { name: "shirt", img: "img", price: 15 },
-    { name: "skirt", img: "img", price: 16 },
-    { name: "coat", img: "img", price: 17 }
+    { name: "shoes", src: "img/shoes.png", price: 10 },
+    { name: "bag", src: "img/shoes.png", price: 11 },
+    { name: "trousers", src: "img/shoes.png", price: 12 },
+    { name: "shorts", src: "img/shoes.png", price: 13 },
+    { name: "t-shirt", src: "img/shoes.png", price: 14 },
+    { name: "shirt", src: "img/shoes.png", price: 15 },
+    { name: "skirt", src: "img/shoes.png", price: 16 },
+    { name: "coat", src: "img/shoes.png", price: 17 }
+
 ]
+
+// I could download the data from API
+
+// const API = ""
+
+// const fetchData = () => {
+
+//     fetch(API)
+
+//         .then(response => {
+
+//             console.log(response);
+
+//             if (response.ok) {
+
+//                 return response;
+//             }
+
+//             throw Error(response.status);
+
+//         })
+//         .then(response => response.json())
+//         .then(data => {
+
+//             if (data instanceof Array) {
+
+//                 productsData = [...data];
+
+//                 renderProducts(productsData);
+//             }
+
+//             throw Error("Invalid data type")
+
+//         })
+//         .catch(error => console.log(`Error ${error}`));
+// }
+
+// fetchData();
 
 const container = document.querySelector(".products-panel");
 
 const renderProducts = (products) => {
 
-    // Wyczyszczenie listy na samym początku
+    // Clear the list at the beginning
 
     container.textContent = "";
 
@@ -28,11 +68,19 @@ const renderProducts = (products) => {
 
         productHtmlElement.classList.add("product-item");
         divImgHtmlElement.classList.add("img");
+
+        const img = document.createElement('img');
+        img.setAttribute('src', product.src);
+
+        console.log(product.src);
+
+        divImgHtmlElement.appendChild(img);
+
         nameHtmlElement.classList.add("name");
         priceHtmlElement.classList.add("price");
 
         nameHtmlElement.textContent = product.name
-        priceHtmlElement.textContent = product.price
+        priceHtmlElement.textContent = product.price + " $"
 
         productHtmlElement.appendChild(divImgHtmlElement);
         productHtmlElement.appendChild(nameHtmlElement);
@@ -43,7 +91,7 @@ const renderProducts = (products) => {
 
 }
 
-// Renderowanie podczas wywołania strony
+// render the products when user enters the page
 
 renderProducts(productsData);
 
@@ -57,8 +105,6 @@ const handleInputChange = () => {
 
     let filterProducts = null;
 
-    // Filtrowanie polega na stworzeniu nowej listy produktów
-
     if (!(priceValue === "")) {
 
         filterProducts = productsData.filter(product => product.name.includes(nameValue) && product.price <= priceValue)
@@ -68,19 +114,10 @@ const handleInputChange = () => {
         filterProducts = productsData.filter(product => product.name.includes(nameValue))
     }
 
-    // Do metody render przekazujemy argument
-
     renderProducts(filterProducts);
 }
 
-// Renderowanie w momencie wpisywania warunków przez użytkownika
+// Rendering when user writes something
 
 nameFilter.addEventListener('input', handleInputChange);
 priceFilter.addEventListener('input', handleInputChange);
-
-
-
-
-
-
-

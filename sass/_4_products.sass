@@ -3,30 +3,29 @@ section.products
     display: flex
     flex-direction: column
 
-    min-height: calc(100vh - 117px)
+    min-height: 100vh
 
     background-color: #ddd
 
     .filter-panel 
 
         padding: 10px
-        
         background-color: #14191F
 
         p 
             padding: 5px
+            font-size: 24px
 
             input 
 
                 padding: 10px
-                border: 3px solid black
-
-                font-size: 20px
-
+                font-size: 24px
                 text-align: center
-                
-        p:nth-of-type(1)
+                &:focus 
+                    outline: none
+                    background-color: #eee
 
+        p:nth-of-type(1)
             color: white
 
     .products-panel 
@@ -35,22 +34,36 @@ section.products
         max-width: 1280px
         flex-grow: 1
 
-        display: flex
-        flex-direction: row
+        +flex-box(row)
+
         flex-wrap: wrap
         justify-content: center
         align-content: start
-
         padding: 10px
 
         .product-item
+
+            +flex-box(column)
 
             height: 200px
             width: 200px
             padding: 10px
             margin: 10px
+            border: 2px solid #666
+            border-radius: 5%
 
-            background-color: grey
+            div
+                flex-grow: 1
+
+                +flex-box-center()
+
+                img
+
+                    width: 50%
+            p
+                flex-basis: 15%
+                padding: 5px
+                font-size: 24px
 
 
 @media(min-width: 1025px)
@@ -58,6 +71,8 @@ section.products
     section.products
 
         .products-panel 
+
+            padding: 50px
 
             .product-item
                 width: 250px
