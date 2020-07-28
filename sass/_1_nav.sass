@@ -5,23 +5,27 @@ nav
     left: 0
     top: 0
     width: 100%
+
     .time 
         padding: 10px    
         text-align: center
+
         background-color: #14191F
         color: white
 
     .burger 
         padding: 10px
-        background-color: #ED221C
-        text-align: center
 
+        text-align: center
         font-size: 30px
+
+        background-color: #ED221C
     ul 
         +flex-box(column)
         height: calc(50px * 4)
         overflow: hidden
         list-style: none
+
         transition: 1s linear
         li 
             flex-grow: 1
@@ -60,7 +64,6 @@ ul.off
             +margin-center()
             max-width: $max-width
             height: 50px
-            justify-content: center
             transition: .2s linear
             li 
                 flex-basis: 15%

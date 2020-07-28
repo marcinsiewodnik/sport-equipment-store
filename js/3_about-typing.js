@@ -3,13 +3,8 @@ const spnCursor = document.querySelector('.cursor');
 
 const txt = ["We offer good quality.", "We have a lot of customers.", "Find out and visit us."];
 
-// Parametry programu
-
 let activeLetter = -10;
 let activeText = 0;
-
-// Prostota rozwiązania
-// Sama zadanie może sprawić trudność
 
 const addLetter = () => {
 
@@ -37,7 +32,5 @@ const addLetter = () => {
 }
 
 addLetter();
-
-// Alternatywnie można wykorzystać css -> animation
 
 setInterval(() => spnCursor.classList.toggle('active'), 400);

@@ -1,4 +1,4 @@
-// Funkcjonalność przechodzenia do danej sekcji -> konieczność napisania w jquery
+// Go to section -> necessity to write it in jquery, otherwise I could download an external library
 
 const nav = $('nav');
 

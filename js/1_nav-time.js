@@ -12,4 +12,6 @@ const clock = () => {
 
 clock();
 
+// It will be invoked asynchronously
+
 setInterval(clock, 1000)

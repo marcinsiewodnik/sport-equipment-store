@@ -13,7 +13,7 @@ let productsData = [
 
 ]
 
-// I could download the data from API
+// I could download the data from API using fetch -> asynchronicity
 
 // const API = ""
 
@@ -104,6 +104,8 @@ const handleInputChange = () => {
     const priceValue = priceFilter.value;
 
     let filterProducts = null;
+
+    // Filter logic conditions
 
     if (!(priceValue === "")) {
 
