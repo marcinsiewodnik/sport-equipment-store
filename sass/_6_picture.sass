@@ -2,7 +2,7 @@ section.picture
     div.img
         position: relative
         min-height: 100vh
-        background-image: url("/img/runners.jpg")
+        background-image: url("../img/runners-min-mobile.jpg")
         background-position: center
         background-size: cover
 
@@ -24,3 +24,9 @@ section.picture
         div.img
             p 
                 font-size: 50px
+
+@media(min-width: 1025px)
+    section.picture
+        div.img
+            background-image: url("../img/runners-min.jpg")
+ 

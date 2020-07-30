@@ -3,17 +3,20 @@
 const slideList = [
 
     {
-        img: 'img/nature.jpg',
+        img: 'img/nature-min.jpg',
+        imgMobile: 'img/nature-min-mobile.jpg',
         text: 'Nature'
     },
 
     {
-        img: 'img/sunset.jpg',
+        img: 'img/sunset-min.jpg',
+        imgMobile: 'img/sunset-min-mobile.jpg',
         text: 'Adventure'
     },
 
     {
-        img: 'img/yellow-mountains.jpg',
+        img: 'img/yellow-mountains-min.jpg',
+        imgMobile: 'img/yellow-mountains-min-mobile.jpg',
         text: 'Excitement'
     }
 ];
@@ -42,6 +45,8 @@ const changeDot = () => {
 
 const changeSlide = () => {
 
+    const windowWidth = window.innerWidth;
+
     active++;
 
     // going right
@@ -50,7 +55,9 @@ const changeSlide = () => {
 
     // change image and text content
 
-    image.src = slideList[active].img;
+    // Different behaviour on mobile and desktop
+
+    image.src = windowWidth < 1024 ? slideList[active].imgMobile : slideList[active].img;
     h1.textContent = slideList[active].text;
 
     changeDot();
